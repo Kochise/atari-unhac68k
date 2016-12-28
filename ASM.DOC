@@ -1,0 +1,74 @@
+----------------------------------------------------------------
+            Accessoire assembleur/d‚sassembleur ligne
+----------------------------------------------------------------
+
+                          Introduction
+
+     Cet accessoire vous permet d'entrer du code machine 68000 en 
+m‚moire. Chaque ligne est imm‚diatement assembl‚e et stock‚e en 
+m‚moire. Il est ‚videmment difficile d'‚crire de longs programmes de 
+cette fa‡on, mais c'est utile pour de petite routines, et parfois 
+plus rapide qu'un "gros" ‚diteur-assembleur.
+     La partie d‚sassembleur du programme vous permet de lister 
+des routines n'importe ou en m‚moire, et mˆme de d‚sassembler le 
+STOS et le systŠme d'exploitation! 
+
+                           Utilisation
+
+     Tout d'abord, il faut charger l'accessoire en m‚moire avec:
+
+          accload "asm.acb"
+
+     Appuyez sur HELP puis sur la touche de fonction affect‚e … 
+l'assembleur. Celui-ci va d'abord charger le programme principal 
+"asm.prg".
+     Une fois ceci fait, vous vous trouvez l'‚diteur-ligne. A 
+partir d'ici, vous pouvez assembler ou d‚sassembler avec les 
+commandes suivantes:
+
+     A [adresse]    (Commence l'assemblage)
+
+     L'adresse est la position m‚moire o— vous d‚sirez commencer. 
+Vous pouvez vous exprimer en diff‚rentes bases:
+
+ 1 D‚cimal     ->   10    145  800
+ 2 Hexad‚cimal ->  $0A   $91  $320
+
+     L'assembleur comprend plusieurs pseudo-instructions: 
+
+ BDF nombre d'octets
+
+     eg  DBF 200,0
+
+ DC.n valeurs
+
+     eg  DC.B "STOS chaine"
+         DC.L 20,$ffff62,2342,1000
+
+ EVEN     (Force … une adresse paire)
+
+ ORG address
+
+    eg  ORG $60040
+
+
+     Z [adresse]    (D‚sassemble … partir d'une adresse)
+
+     <RETURN> dirige l'impression sur l'‚cran, CONTROL+C sur 
+l'imprimante.
+
+
+     D [taille]     (Affiche la m‚moire (Display))
+
+     Affiche le contenu de la m‚moire. Ce "dump" est affich‚ en 2 
+parties : en hexad‚cimal et en ASCII. Ici encore, <RETURN> et 
+<CONTROL+C> permettent de choisir entre ‚cran et imprimante.
+
+     W              (Sauve un fichier binaire)
+
+
+     Et pour retourner au basic:
+
+     CONTROL+C      (Sort de l'assembleur)
+
+

@@ -1,0 +1,54 @@
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+///                                                ///
+/// >>> UnHac68K - Assembler Version - KOOS 98 <<< ///
+///                                                ///
+/// Version 1.10 - May 1998                        ///
+///                                                ///
+//////////////////////////////////////////////////////
+///                                                ///
+///                                                ///
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+Pourquoi ce nom : En fait, c'est la composition de UnHack, qui vient de Hack,
+  pirater dans le jargon informatique, et de 68K, pour le 68000, probablement
+  l'un des meilleurs processeurs.
+
+Le but de ce logiciel : Avant toute chose, j'ai mis au point ce logiciel dans
+  un but unique, pirater. Je sais, ce n'est pas louable, mais voyez vous, je
+  manque de documentation, aussi il me fallait r‚gulierement desassembler des
+  logiciels pour esperer trouver ce que je cherchais. L'inconv‚nient, c'est que
+  l'on ne peut pas dire que le d‚buggueur de DevPac soit fait pour cela, et son
+  ergonomie n'est certainement pas orient‚ dans ce domaine. Aussi, une de mes
+  habitudes, c'est lorsqu'il me manque un outil fiable, avant mˆme de chercher
+  … savoir s'il existe d‚j… dans le commerce, c'est de commencer … m'en faire
+  un. La premiere version ‚tait en GFA, tout … fait pratique, mais ne g‚rait
+  pas encore la d‚tection du type de traitement des instructions.
+
+Kesako : Vous aurez surrement remarquez que MonST desassemble tout ce qui lui
+  tombe sous le pointeur. Or il n'y … pas forcement que des instructions, mais
+  aussi des donn‚es, dont la combinaison binaire peut correspondre … celle
+  d'une instruction. Le processeur pourrait les interpreter, s'il passait
+  dessus. Mais celui ci ne voyage que dans un canal tout trac‚, le programme.
+  Il lui arrive de prendre des petits canaux adjacents, les sous routines, mais
+  jamais il n'ira sur des donn‚es si l'on ne l'y envoie pas. Or … la premiere
+  donn‚e dont la combinaison ne correspond pas … une instruction correctement
+  formul‚e, le processeur plante.
+    Ainsi, pour comprendre le charabia, et pouvoir imm‚diatement faire la
+  distinction entre les donn‚es et les instructions, il y a un systeme de
+  routage que va suivre le programme et noter o— il passe, ce qui correspond
+  … des instructions, et les endroits utilis‚s par les instructions comme
+  donn‚es ou comme place pour ranger des valeurs, les variables.
+
+Pourquoi le fichier SSAVCALL.PRG : Et bien ma foi, en tant que concepteur de
+  SSAVCALL, je me doit de supporter mes propres productions. D'ailleurs, j'ose
+  esperer que personne ne se plaidra du fait de l'utilisation d'une interface
+  GEM au lieu de textuelle comme dans la version GFA. Mais bon, affaire de
+  gout, et puis ‡a ne mange pas de pain (juste une petite quarantaine de Ko en
+  m‚moire). Certains auront donc compris que UnHac68k ne marche pas encore sur
+  ST, alors que je ne desassemble ici que du code 68000. On est illogique ou
+  l'on ne l'est pas (n'est ce pas Mr Spock...).
+
